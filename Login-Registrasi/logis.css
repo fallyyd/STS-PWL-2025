@@ -1,0 +1,90 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-image: url('PERPUS.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+
+.login-box {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #007BFF;
+    border-radius: 18px;
+    padding: 40px 32px;   
+    max-width: 350px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.login-box img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.user-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    max-width: 250px;
+}
+
+.pass-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    max-width: 250px;
+}
+
+.pass-box h6 {
+    margin-right: -11px;
+    margin-top: -3px;
+    font-size: 10px;
+    text-align: right;
+    color: #007BFF;
+}
+
+.login-box button {
+    background-color: #007BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+.quick-login {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 10px;
+    max-width: 10px;
+    max-height: 10px;
+}
+
+.quick-login img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
