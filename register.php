@@ -1,4 +1,5 @@
 <?php
+// Some Comment
 include 'connect.php'; 
 
 
