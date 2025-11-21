@@ -1,0 +1,131 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #e9f9f7;
+}
+
+header {
+  background-color: #e9f9f7;
+  padding: 10px 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.search-bar {
+  flex: 1;
+  background: white;
+  border-radius: 25px;
+  padding: 8px 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  background: transparent;
+}
+
+
+.kategori {
+  padding: 10px 20px;
+}
+
+.kategori-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: px;
+  padding: 12px 28px;
+  font-size: 50px;
+  border-radius: 30px;
+}
+
+.kategori-container button {
+  background: white;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 20px 40px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.rekomendasi {
+  padding: 10px 20px 80px; 
+}
+
+.buku-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+}
+
+.buku-card {
+  min-width: 160px;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+}
+
+.buku-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.buku-card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+}
+
+.buku-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.buku-card button {
+  margin-top: 20px;
+  background-color: #7c5cff;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: white;
+  border-top: 1px solid #ccc;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+
+footer img {
+  width: 25px;
+  height: 25px;
+}

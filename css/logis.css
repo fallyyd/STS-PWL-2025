@@ -1,0 +1,120 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-image: url('../images/buku/icons/PERPUS.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+
+.login-box {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #007BFF;
+    border-radius: 18px;
+    padding: 40px 32px; 
+    max-width: 350px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.login-box img {
+    width: 150px; 
+    height: 150px;
+    margin-bottom: 20px;
+    -webkit-user-drag: none;
+}
+
+.user-box input,
+.pass-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    max-width: 250px;
+    box-sizing: border-box; 
+}
+
+.pass-box {
+    width: 100%;
+    max-width: 250px; 
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.pass-box h6 {
+    margin: 0; 
+    font-size: 12px; 
+    color: #007BFF;
+}
+
+.login-box button {
+    background-color: #007BFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0 20px 0; 
+    width: 250px;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid #000000;
+    
+    transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+    background-color: #0056b3;
+}
+
+.login-box > h5 { 
+    margin: 20px 0 15px 0; 
+    font-size: 16px;
+}
+
+.quick-login {
+    display: flex;
+    justify-content: center;
+    gap: 25px; 
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.quick-login img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin: 0; 
+}
+
+.sign-up {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.sign-up h6 {
+    font-size: 14px; 
+    margin: 0; 
+    color: #333;
+    font-weight: normal; 
+}
+
+.sign-up h6 a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sign-up h6 a:hover {
+    text-decoration: underline;
+}
