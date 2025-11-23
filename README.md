@@ -1,50 +1,84 @@
-📘 PustakaGo
-Digital Library Platform for Modern Readers
+PustakaGo – Digital Library Platform
 
-PustakaGo is a digital library platform designed to provide a seamless, flexible, and accessible reading experience. With a wide collection of titles and an online borrowing system, PustakaGo offers a practical solution for anyone who wishes to read anytime, anywhere—without the limitations of a physical library.
+PustakaGo is a modern online library platform designed to make reading more accessible for everyone. Users can browse, borrow, and manage digital books anytime and anywhere through an intuitive and user-friendly interface.
 
-✨ Key Features
-• Extensive Book Collection
+* Main Features
+1. Browse Book Collection 
+Users can explore a wide collection of books from various categories and genres.
 
-Offering a broad selection of titles across multiple categories, from general literature to academic fields.
+2. Online Borrowing System
+Borrow books with one click. Borrowed books will appear instantly in the user’s personal library.
 
-• Online Borrowing System
+3. Smart Search & Filtering
+Search by title, author, or category to find books quickly and efficiently.
 
-Borrow books digitally with a single click—simple, fast, and efficient.
+4. My Library Management
+All borrowed books are displayed neatly in the My Library section with status and duration.
 
-• Smart Search & Filtering
+5. Easy Book Returns
+Return borrowed books anytime through the system.
 
-Find books more easily using filters based on title, author, or category.
+6. Responsive Interface
+Designed to work smoothly across desktops, tablets, and smartphones.
 
-• Organized Borrowing Management
+* Core Entities Used
+Entity		: Description
+Users		: Stores user account information (name, email, password).
+Books		: Holds data about all available books (title, author, category, description, availability).
+Borrowings	: Tracks which user borrowed which book, including borrow date and return date.
+Categories	: Optional entity to categorize books by genre or type.
 
-Every borrowed book is neatly stored in the My Library section, complete with borrowing status and duration.
+* Entity Relationship Overview :
 
-• Easy Book Returns
+- One User → Many Borrowings
+- One Book → Many Borrowings
+- One Category → Many Books
 
-Return books anytime with a streamlined and hassle-free process.
+* Database Setup
+Below is a simple SQL setup that you can directly use in MySQL / phpMyAdmin / Laragon:
 
-• Responsive & User-Friendly Design
+1. Create Database
+CREATE DATABASE pustakago;
+USE pustakago;
 
-A clean, modern interface that works beautifully across all devices.
+2. Users Table
+CREATE TABLE users (
+    user_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(100)
+);
 
-🖇️ How to Use
+3. Books Table
+CREATE TABLE books (
+    book_id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(200),
+    author VARCHAR(150),
+    category VARCHAR(100),
+    description TEXT,
+    availability BOOLEAN DEFAULT TRUE
+);
 
-Create an account or log in.
+4. Borrowings Table
+CREATE TABLE borrowings (
+    borrow_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    book_id INT,
+    borrow_date DATE,
+    return_date DATE,
+    FOREIGN KEY (user_id) REFERENCES users(user_id),
+    FOREIGN KEY (book_id) REFERENCES books(book_id)
+);
 
-Browse the available collection on the main page.
+5. (Optional) Categories Table
+CREATE TABLE categories (
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_name VARCHAR(100)
+);
 
-Click Borrow to borrow your selected book.
+* Authors
 
-Access your borrowed books through the My Library section.
-
-Return books online once you're done reading.
-
-👤 Authors & Developers
-
-This platform and documentation were developed by:
+Developed by:
 • Albert J. V.
 • Marvin A.
 • Wilson C.
-
-A team dedicated to delivering a modern, practical, and high-quality digital reading experience.
